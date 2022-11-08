@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "109722118534",
+    "project_id": "gdrivetest-a745d",
+    "storage_bucket": "gdrivetest-a745d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109722118534:android:21b75a392a601a8e79a407",
+        "android_client_info": {
+          "package_name": "com.example.gdrive_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109722118534-8eb8edo8vm7p3b8usst3vegv37amf909.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gdrive_test",
+            "certificate_hash": "a0db07d06052b4be7f0a0a6e9866bc44dfa094b7"
+          }
+        },
+        {
+          "client_id": "109722118534-qa53lhnde9fe1b7e6nf8h6vt6jhssbft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc7EheO8vRjjlEgJd3saOGyMIimFZPWu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109722118534-qa53lhnde9fe1b7e6nf8h6vt6jhssbft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
