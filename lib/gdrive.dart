@@ -116,6 +116,8 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
     log("Sign out");
   }
 
+  //:::::::::::::::::::::::::::::::::::: GOOGLE DRIVE API ::::::::::::::::::::::::::::::::::::
+
   Future<drive.DriveApi?> _getDriveApi() async {
     final googleUser = await googleSignIn.signIn();
     final headers = await googleUser?.authHeaders;
@@ -130,6 +132,8 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
     final driveApi = drive.DriveApi(client);
     return driveApi;
   }
+
+  //:::::::::::::::::::::::::::::::::::: UPLOAD FILE TO HIDDEN FOLDER ::::::::::::::::::::::::::::::::::::
     
   Future<void> _uploadToHidden() async {
     try {
@@ -162,6 +166,8 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
     }
   }
 
+  //:::::::::::::::::::::::::::::::::::: CREATE FOLDER AND GET ID ::::::::::::::::::::::::::::::::::::
+
   Future<String?> _getFolderId(drive.DriveApi driveApi) async {
     const mimeType = "application/vnd.google-apps.folder";
     String folderName = "audacity-gdrive-test";
@@ -192,10 +198,14 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
       return folderCreation.id;
     } catch (e) {
       log(e.toString());
-      // I/flutter ( 6132): DetailedApiRequestError(status: 403, message: The granted scopes do not give access to all of the requested spaces.)
+      // I/flutter ( 6132): DetailedApiRequestError(
+      //status: 403,
+      //message: The granted scopes do not give access to all of the requested spaces.)
       return null;
     }
   }
+
+  //:::::::::::::::::::::::::::::::::::: UPLOAD FILE TO NORMAL FOLDER ::::::::::::::::::::::::::::::::::::
 
   Future<void> _uploadToNormal() async {
     try {
@@ -237,6 +247,7 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
     }
   }
 
+  //:::::::::::::::::::::::::::::::::::: PICK FILES ::::::::::::::::::::::::::::::::::::
   Future<void> _openFilePicker() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles();
   
@@ -250,6 +261,8 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
       // User canceled the picker
     }
   }
+
+  //:::::::::::::::::::::::::::::::::::: SHOW LIST FROM GDRIVE ::::::::::::::::::::::::::::::::::::
 
   Future<void> _showList() async {
     final driveApi = await _getDriveApi();
