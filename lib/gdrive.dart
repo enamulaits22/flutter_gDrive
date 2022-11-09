@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:gdrive_test/audio_record_page.dart';
 import 'package:gdrive_test/auth_client.dart';
 import 'package:gdrive_test/download_page.dart';
 import 'package:gdrive_test/show_dialog.dart';
@@ -76,6 +77,12 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const DownloadPage()));
               },
               child: const Text("Downloads"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const AudioRecordPage()));
+              },
+              child: const Text("Record Audio"),
             ),
           ],
         ),
