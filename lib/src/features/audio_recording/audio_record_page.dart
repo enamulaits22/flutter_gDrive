@@ -3,7 +3,7 @@ import 'dart:ui' as ui show Gradient;
 
 import 'package:audio_waveforms/audio_waveforms.dart';
 import 'package:flutter/material.dart';
-import 'package:gdrive_test/utils.dart';
+import 'package:gdrive_test/src/utils/utils.dart';
 import 'package:intl/intl.dart';
 
 class AudioRecordPage extends StatefulWidget {

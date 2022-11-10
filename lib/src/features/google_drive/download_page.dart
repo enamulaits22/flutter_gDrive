@@ -2,7 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:gdrive_test/src/utils/utils.dart';
 
 class DownloadPage extends StatefulWidget {
   const DownloadPage({super.key});
@@ -20,8 +20,7 @@ class _DownloadPageState extends State<DownloadPage> {
   }
 
   getDownloadedFileList() async {
-    final directory = (await getApplicationDocumentsDirectory()).path;
-    final gDrivePath = '$directory/gDrive';
+    final gDrivePath = await Utils.createFolderPath('gDrive');
     final dir = Directory(gDrivePath);
     var entities = await dir.list().toList();
     log('Total Files: ${entities.length.toString()}');
