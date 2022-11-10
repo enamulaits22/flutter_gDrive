@@ -92,6 +92,7 @@ class _GoogleDriveTest extends State<GoogleDriveTest> {
               },
               child: const Text("Downloads"),
             ),
+            const Divider(),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

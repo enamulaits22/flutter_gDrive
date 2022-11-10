@@ -20,7 +20,7 @@ class _DownloadPageState extends State<DownloadPage> {
   }
 
   getDownloadedFileList() async {
-    final gDrivePath = await Utils.createFolderPath('gDrive');
+    final gDrivePath = await Utils.createOrGetFolderPath('gDrive');
     final dir = Directory(gDrivePath);
     var entities = await dir.list().toList();
     log('Total Files: ${entities.length.toString()}');

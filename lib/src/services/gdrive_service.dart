@@ -194,7 +194,7 @@ class GoogleDriveService {
       ) as drive.Media?;
       // var file = File(res.toString());
       // log(file.path);
-      final customPath = await Utils.createFolderPath('gDrive');
+      final customPath = await Utils.createOrGetFolderPath('gDrive');
       final String fileName = '$customPath/${driveFile.name}';
       File file = File(fileName);
       List<int> dataStore = [];
