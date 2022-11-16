@@ -25,10 +25,10 @@ packages:
   audio_waveforms:
     dependency: "direct main"
     description:
-      name: audio_waveforms
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.5+1"
+      path: "packages/audio_waveform"
+      relative: true
+    source: path
+    version: "1.0.0"
   boolean_selector:
     dependency: transitive
     description:

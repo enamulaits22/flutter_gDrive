@@ -31,6 +31,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  audio_waveforms:
+    path: packages/audio_waveform
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,7 +49,7 @@ dependencies:
   http: ^0.13.5
   file_picker: ^5.2.2
   path_provider: ^2.0.11
-  audio_waveforms: ^0.1.5+1
+  # audio_waveforms: ^0.1.5+1
 
 dev_dependencies:
   flutter_test:

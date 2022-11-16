@@ -39,12 +39,12 @@ class _AudioRecordPageState extends State<AudioRecordPage> {
     final String path = await Utils.createOrGetFolderPath('audioRecord');
     final timestamp = DateFormat("yyyy-MM-dd-hhmmss").format(DateTime.now());
     final String recordedFilePath = '$path/$timestamp.aac';
-    await recorderController.record(recordedFilePath);
+    await recorderController.record(path: recordedFilePath);
   }
 
   Future<void> _stopRecording() async {
     final path = await recorderController.stop();
-    log(path.toString());
+    log("Recording saved at: $path");
     await playerController.preparePlayer(path!);
     setState(() {
       audioRecordingState = AudioRecordingState.recorded;
